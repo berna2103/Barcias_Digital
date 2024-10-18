@@ -2,7 +2,7 @@ import Navbar from  "./Components/NavBar/Navbar.jsx"
 
 
 import "./globals.css";
-import { Fraunces, Inter, Roboto } from 'next/font/google'
+import { Fraunces, Inter, Nunito, Playfair_Display, Roboto } from 'next/font/google'
 
 
 const fraunces = Fraunces({
@@ -20,6 +20,11 @@ const roboto = Roboto({
   subsets: ['latin'],
 })
 
+const nunito = Nunito({
+  weight: ['200','300','400', '500', '700', '900'],
+  subsets: ['latin'],
+})
+
 
 
 export const metadata = {
@@ -30,7 +35,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${fraunces.className} antialiased`}    >
+      <body className={`${nunito.className} antialiased`}    >
        <Navbar />
        
         {children}

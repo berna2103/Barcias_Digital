@@ -1,13 +1,17 @@
+'use client'
 import Image from 'next/image';
 import styles from './HeroSection.module.css';
 import Background from '../Background/Background';
 import BookAppointmentButton from '../BookAppointmentButton/BookAppointmentButton';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import { Carousel } from 'react-responsive-carousel';
+
 const HeroSection = () => {
 
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -32,6 +36,45 @@ const HeroSection = () => {
     },
   ];
 
+  const slides = [
+    {
+      id: 1,
+      imgURL: '/hero/hero1.jpg',
+      alt: `Carousel image 1`,
+    },
+    {
+      id: 2,
+      imgURL: '/hero/hero2.jpg',
+      alt: `Carousel image 2`,
+    },
+    {
+      id: 3,
+      imgURL: '/hero/hero3.jpg',
+      alt: `Carousel image 3`,
+    },
+    {
+      id: 4,
+      imgURL: '/hero/hero4.jpg',
+      alt: `Carousel image 4`,
+    },
+    {
+      id: 5,
+      imgURL: '/hero/hero5.jpg',
+      alt: `Carousel image 5`,
+    },
+    {
+      id: 6,
+      imgURL: '/hero/hero6.jpg',
+      alt: `Carousel image 6`,
+    },
+    {
+      id: 7,
+      imgURL: '/hero/hero7.jpg',
+      alt: `Carousel image 7`,
+    },
+    
+  ];
+
 
   return (
     <section className={`${styles.hero}`}>
@@ -47,16 +90,26 @@ const HeroSection = () => {
        
       <BookAppointmentButton />
       </div>
-    
       <div className={styles.heroImage}>
-        <Image
-          src="/hero.png"
-          alt="Digital marketing solutions"
-          layout="responsive"
-          width={500}
-          height={300}
-        />
-      </div>
+      <Carousel
+    autoPlay
+    interval={3000}
+    infiniteLoop
+    showThumbs={false}
+    showStatus={false}
+  >
+    {slides.map(slide => 
+      <Image 
+        id={slide.id}  
+        src= {slide.imgURL}
+        alt={slide.alt}
+        layout="responsive"
+        width={500}
+        height={300} />
+    )}
+  </Carousel>
+  </div>
+
     </section>
   );
 };
