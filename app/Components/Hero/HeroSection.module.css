@@ -27,7 +27,7 @@
   
   .heroSubheadline {
     font-size: 1.5rem;
-    color: #6c757d;
+    color: #ffffff;
     margin-bottom: 40px;
   }
   
@@ -35,7 +35,7 @@
     padding: 10px 20px;
     font-size: 1.2rem;
     background-color: red;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     cursor: pointer;

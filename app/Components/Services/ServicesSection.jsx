@@ -46,7 +46,9 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id='services' className="bg-gray-50 py-20 px-6">
+    <div className='grid items-center justify-items-center p-8 pb-20 gap-16 sm:p-20'>
+    <section id='services' className="px-6 bg-zinc-100 pt-10 z-50  rounded">
+      
       <h2 className="text-4xl font-bold text-center mb-10">Our Services</h2>
       <p className="text-xl text-gray-600 text-center mb-20">
         Barcias Tech specializes in helping small to medium size businesses. Our
@@ -73,6 +75,7 @@ const ServicesSection = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

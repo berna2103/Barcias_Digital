@@ -77,12 +77,13 @@ const HeroSection = () => {
 
 
   return (
-    <section className={`${styles.hero}`}>
+    <div className='grid items-center justify-items-center p-8 pb-20 gap-16 sm:p-20'>
+    <div className={`${styles.hero}`}>
       <Background />
-
+      <div className="absolute -z-50  inset-0 bg-red-500 transform -skew-y-12 w-full h-full"></div>
       <div className={styles.heroContent}>
         <h1 className={`${styles.heroHeadline}`}>
-          <span className='text-red-500'>Elevate</span> Your <span className='text-red-500'>Business</span> with Our Digital Marketing and Branding Solutions
+          <span className='text-zinc-50'>Elevate</span> Your <span className='text-zinc-50'>Business</span> with Our Digital Marketing and Branding Solutions
         </h1>
         <p className={styles.heroSubheadline}>
           We help businesses grow and succeed in the digital world.
@@ -92,25 +93,24 @@ const HeroSection = () => {
       </div>
       <div className={styles.heroImage}>
       <Carousel
-    autoPlay
-    interval={3000}
-    infiniteLoop
-    showThumbs={false}
-    showStatus={false}
-  >
-    {slides.map(slide => 
-      <Image 
-        id={slide.id}  
-        src= {slide.imgURL}
-        alt={slide.alt}
-        layout="responsive"
-        width={500}
-        height={300} />
-    )}
-  </Carousel>
-  </div>
-
-    </section>
+        autoPlay
+        interval={3000}
+        infiniteLoop
+        showThumbs={false}
+        showStatus={false}>
+          {slides.map(slide => 
+            <Image 
+              id={slide.id}  
+              src= {slide.imgURL}
+              alt={slide.alt}
+              layout="responsive"
+              width={500}
+              height={300} />
+          )}
+        </Carousel>
+      </div>
+    </div>
+    </div>
   );
 };
 

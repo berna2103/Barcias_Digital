@@ -26,7 +26,7 @@ const slides = [
 
 const BarciaCarousel = () => {
     return (
-        <div className={`${styles.heroContent} rounded  bg-zinc-50`}>
+        <div className={`${styles.heroContent} rounded`}>
             <h2 className="text-4xl font-bold m-10 text-center mb-10 mt-20">Branding That Stands Out Everywhere</h2>
             <p className="text-xl text-gray-600 m-10 text-center mb-20">
               From vans to websites, we ensure your brand is consistently represented across all touchpoints. Stand out with our comprehensive branding solutions.
@@ -37,7 +37,7 @@ const BarciaCarousel = () => {
             transitionTime={1000} >
                {slides.map(slide => (
                 <div>
-                    <img  layout="responsive" src={slide.image} alt={slide.alt} />
+                    <img layout="responsive" src={slide.image} alt={slide.alt} />
                 </div>
                ))}
             </Carousel>
