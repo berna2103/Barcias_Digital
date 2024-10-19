@@ -5,7 +5,6 @@ import {
   Fraunces,
   Inter,
   Nunito,
-  Playfair_Display,
   Roboto,
 } from "next/font/google";
 
@@ -39,7 +38,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${nunito.className} `}>
         <Navbar />
-
         {children}
       </body>
     </html>
