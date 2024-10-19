@@ -1,31 +1,33 @@
-import Navbar from  "./Components/NavBar/Navbar.jsx"
-
+import Navbar from "./Components/NavBar/Navbar.jsx";
 
 import "./globals.css";
-import { Fraunces, Inter, Nunito, Playfair_Display, Roboto } from 'next/font/google'
-
+import {
+  Fraunces,
+  Inter,
+  Nunito,
+  Playfair_Display,
+  Roboto,
+} from "next/font/google";
 
 const fraunces = Fraunces({
-  weight: ['100','300','400', '500', '700', '900'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+});
 
 const inter = Inter({
-  weight: ['100','300','400', '500', '700', '900'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+});
 
 const roboto = Roboto({
-  weight: ['100','300','400', '500', '700', '900'],
-  subsets: ['latin'],
-})
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+});
 
 const nunito = Nunito({
-  weight: ['200','300','400', '500', '700', '900'],
-  subsets: ['latin'],
-})
-
-
+  weight: ["200", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -35,12 +37,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} antialiased`}    >
-       <Navbar />
-       
+      <body className={`${nunito.className} `}>
+        <Navbar />
+
         {children}
-
-
       </body>
     </html>
   );

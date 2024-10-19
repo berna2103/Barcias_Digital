@@ -47,15 +47,17 @@ const services = [
 const ServicesSection = () => {
   return (
     <div className='grid items-center justify-items-center p-8 pb-20 gap-16 sm:p-20'>
-    <section id='services' className="px-6 bg-zinc-100 pt-10 z-50  rounded">
+    <section id='services' className="px-6 bg-zinc-100 pt-10 z-10  rounded">
       
       <h2 className="text-4xl font-bold text-center mb-10">Our Services</h2>
-      <p className="text-xl text-gray-600 text-center mb-20">
+      
+      <p className="text-xl text-gray-600 text-center mb-10">
         Barcias Tech specializes in helping small to medium size businesses. Our
         services include web design, branding, digital marketing, and much
         more. We understand the budget constraints of small businesses thus we
         provide high quality affordable services.
       </p>
+     
       <div className="flex flex-wrap justify-center">
         {services.map((service) => (
           <div key={service.id} className="max-w-sm bg-zinc-100 rounded overflow-hidden shadow-lg m-4">
